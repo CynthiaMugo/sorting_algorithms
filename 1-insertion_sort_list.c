@@ -34,10 +34,10 @@ void insertion_sort_list(listint_t **list)
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	for (iter = (*list)->next; iter != NLULL; iter = tmp)
+	for (iter = (*list)->next; iter != NULL; iter = tmp)
 	{
 		tmp = iter->next;
-		insert  iter->prev;
+		insert = iter->prev;
 		while (insert != NULL && iter->n  < insert->n)
 		{
 			swap_nodes(list, &insert, iter);
